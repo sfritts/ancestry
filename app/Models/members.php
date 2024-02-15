@@ -12,4 +12,8 @@ class members extends Model
     public $timestamps = FALSE;
     
     protected $fillable = ["id_number", "first_name", "last_name", "married", "spouse", "state_id", "city"];
+    
+    public function state(){
+        return $this->hasOne('App\Models\states', 'id');
+    }
 }

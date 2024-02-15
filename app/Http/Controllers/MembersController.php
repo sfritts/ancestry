@@ -15,7 +15,7 @@ class MembersController extends Controller
      */
     public function index()
     {
-        $data['members'] = members::get(["id_number", "first_name", "last_name"]);
+        $data['members'] = members::with('state')->get();
         return view('members.index', $data);
     }
 
