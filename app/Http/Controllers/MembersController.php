@@ -14,7 +14,7 @@ class MembersController extends Controller {
      * Display a listing of the resource.
      */
     public function index() {
-        $data['members'] = members::with('state')->get(['id_number', 'first_name', 'middle_name', 'last_name', 'state_id', 'city']);
+        $data['members'] = members::with('state')->get(['id', 'id_number', 'first_name', 'middle_name', 'last_name', 'state_id', 'city']);
         return view('members.index', $data);
     }
 
@@ -49,8 +49,10 @@ class MembersController extends Controller {
     /**
      * Display the specified resource.
      */
-    public function show(members $members) {
-        //
+    public function show(members $member) {
+        $data['states'] = states::get(["id", "name"]);
+        $data['member'] = $member;
+        return view('members.show', $data);
     }
 
     /**
