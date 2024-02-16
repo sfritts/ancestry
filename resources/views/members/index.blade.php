@@ -19,8 +19,7 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
+                <th scope="col">Name</th>
                 <th scope="col">Location</th>
             </tr>
         </thead>
@@ -28,8 +27,7 @@
             @foreach($members as $member)
             <tr>
                 <th scope="row">{{ $member->id_number }}</th>
-                <td>{{ $member->first_name }}</td>
-                <td>{{ $member->last_name }}</td>
+                <td>{{ $member->first_name }} {{ $member->middle_name }} {{ $member->last_name }}</td>
                 <td>{{ $member->city }}, {{ $member->state->name }}</td>
             </tr>
             @endforeach
