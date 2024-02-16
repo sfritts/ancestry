@@ -50,6 +50,20 @@
     </div>
     <div class="row">
         <div class="col-lg-2">
+            <div class="mb-3">
+                <label for="spouse" class="form-label">Born</label>
+                <input type="text" class="form-control" id="born" name="born" placeholder="Enter what is Known"/>
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="mb-3">
+                <label for="spouse" class="form-label">Died</label>
+                <input type="text" class="form-control" id="died" name="died"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" id="married" name="married">
                 <label class="form-check-label" for="married"> Married</label>

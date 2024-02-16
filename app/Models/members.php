@@ -11,7 +11,7 @@ class members extends Model
     
     public $timestamps = FALSE;
     
-    protected $fillable   = ["id_number", "first_name", "last_name", "married", "spouse", "state_id", "city"];
+    protected $fillable   = ["id_number", "first_name", "last_name", "married", "spouse", "state_id", "city", "born", "died"];
     protected $table      = 'members';
     protected $primaryKey = 'id';
     
